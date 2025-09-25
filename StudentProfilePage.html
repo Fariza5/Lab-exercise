@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Student Profile</title>
+  <style>
+    :root{--accent:#3b82f6;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:#f7fafc;color:#111}
+    .container{max-width:900px;margin:40px auto;padding:20px}
+    header.site-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    header h1{margin:0;font-size:1.25rem}
+    nav.social a{margin-left:10px;text-decoration:none;color:var(--accent)}
+    .card{background:white;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.06);padding:24px;display:grid;grid-template-columns:280px 1fr;gap:24px}
+    figure{margin:0;text-align:center}
+    figure img{width:100%;height:auto;border-radius:8px}
+    figure figcaption{margin-top:10px;color:var(--muted);font-size:0.95rem}
+    .bio h2{margin-top:0}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+    .tag{background:#eef2ff;color:#2b2b2b;padding:6px 10px;border-radius:999px;font-size:0.85rem}
+    aside{padding:14px;background:#fcfcfe;border-radius:8px}
+    form{display:flex;flex-direction:column;gap:10px}
+    label{font-size:0.9rem}
+    input[type="text"],input[type="email"]{padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+    button{background:var(--accent);color:white;border:none;padding:10px 14px;border-radius:8px;font-weight:600;cursor:pointer}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+    @media (max-width:720px){.card{grid-template-columns:1fr}header.site-header{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <h1>Student Profile</h1>
+      <nav class="social" aria-label="Student social links">
+        <!-- Dummy links -->
+        <a href="#" title="Twitter (dummy)">Twitter</a>
+        <a href="#" title="Instagram (dummy)">Instagram</a>
+        <a href="#" title="LinkedIn (dummy)">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main>
+      <article class="card">
+        <section aria-labelledby="profile-name">
+          <figure>
+            <img src="photo/photo.jpg" alt="Picture">
+            <figcaption>“Life is a mosaic of small steps, each one shaping who we become. The challenges we face are not roadblocks but turning points, reminding us that resilience, curiosity, and hope can transform even the hardest paths into journeys of meaning.”</figcaption>
+          </figure>
+        </section>
+
+        <section class="bio">
+          <h2 id="profile-name">Fariza Mavlododova</h2>
+          <p><strong>Short bio:</strong> I’m a curious mind with a love for both science and creativity. My journey has taken me from teaching math in classrooms to helping researchers document endangered languages, and even into the world of coding, where I build tools that make people’s work easier. I enjoy connecting ideas from different fields — whether it’s linguistics, technology, or education — and turning them into something meaningful. Beyond studies, I value conversations that challenge me, cultures that inspire me, and projects that help communities grow..</p>
+
+          <div class="tags" aria-hidden="true">
+            <span class="tag">Education</span>
+            <span class="tag">Linguistics</span>
+            <span class="tag">Frontend</span>
+          </div>
+
+          <p>If you'd like to get in touch, use the contact form on the right or email me at <a href="fmavlododova@gmail.com">fmavlododova@gmail.com</a>.</p>
+
+          <aside>
+            <h3>Quick details</h3>
+            <ul>
+              <li><strong>Location:</strong> Naryn, Kyrgyzstan</li>
+              <li><strong>Languages:</strong> Shugni, Russian, English, Tajik, Kyrgyz, French</li>
+              <li><strong>Interests:</strong> Programming, Volleyball, Guitar, Piano, Dancing</li>
+            </ul>
+          </aside>
+        </section>
+
+        <aside>
+          <h3>Contact form</h3>
+          <form action="#" method="post" aria-label="Contact student form">
+            <div>
+              <label for="visitor-name">Your name</label>
+              <input id="visitor-name" name="visitor-name" type="text" placeholder="Full name" required>
+            </div>
+
+            <div>
+              <label for="visitor-email">Your email</label>
+              <input id="visitor-email" name="visitor-email" type="email" placeholder="name@example.com" required>
+            </div>
+
+            <div>
+              <button type="submit">Send message</button>
+            </div>
+          </form>
+        </aside>
+
+      </article>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ — this is an example Student Profile Page using semantic HTML: &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;.</p>
+    </footer>
+  </div>
+</body>
+</html>
